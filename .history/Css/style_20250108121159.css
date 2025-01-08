@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Inter;
+  src: url("/Font/Inter_24pt-Regular.ttf");
+  font-weight: 400;
+}
+.main-container {
+  max-width: 100%;
+  height: 100vh;
+  background-image: url("/image/hero-1.jpg");
+}
+.container {
+  max-width: 1400px;
+  display: block;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+li {
+  list-style: none;
+}
+li a {
+}
