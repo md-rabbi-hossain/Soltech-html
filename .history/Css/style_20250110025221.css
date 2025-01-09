@@ -57,7 +57,7 @@ nav {
   padding-bottom: 20px;
   position: relative;
   transition: all 0.3s ease;
-  z-index: 666666666;
+  z-index: 1000;
 }
 nav.sticky {
   background-color: rgba(253, 253, 254, 0.8);
@@ -221,6 +221,7 @@ nav.sticky {
 }
 section.main-container.cta-section {
   position: relative;
+  overflow: hidden;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -228,9 +229,9 @@ section.main-container.cta-section {
 section.main-container.cta-section::after {
   content: ""; /* Required for pseudo-elements */
   position: absolute;
-  top: 20%;
+  top: 15%;
   right: 0; /* Stick it to the right side */
-  height: 60%; /* Full height of the section */
+  height: 70%; /* Full height of the section */
   width: 50%; /* Adjust width as needed */
   background: #f4f4f9;
   z-index: -1; /* Place behind content */

@@ -57,7 +57,7 @@ nav {
   padding-bottom: 20px;
   position: relative;
   transition: all 0.3s ease;
-  z-index: 666666666;
+  z-index: 1000;
 }
 nav.sticky {
   background-color: rgba(253, 253, 254, 0.8);
@@ -221,6 +221,7 @@ nav.sticky {
 }
 section.main-container.cta-section {
   position: relative;
+  overflow: hidden;
   height: 100vh;
   display: flex;
   align-items: center;

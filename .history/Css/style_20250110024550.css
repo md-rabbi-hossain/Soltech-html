@@ -57,7 +57,7 @@ nav {
   padding-bottom: 20px;
   position: relative;
   transition: all 0.3s ease;
-  z-index: 666666666;
+  z-index: 1000;
 }
 nav.sticky {
   background-color: rgba(253, 253, 254, 0.8);
@@ -135,7 +135,7 @@ nav.sticky {
 /*  Hero Section Styles Here */
 .Hero-parents-container {
   max-width: 100%;
-  height: 120vh;
+  height: 100vh;
   background-image: url("/image/hero-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -221,6 +221,7 @@ nav.sticky {
 }
 section.main-container.cta-section {
   position: relative;
+  overflow: hidden;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -228,11 +229,11 @@ section.main-container.cta-section {
 section.main-container.cta-section::after {
   content: ""; /* Required for pseudo-elements */
   position: absolute;
-  top: 20%;
+  top: 0;
   right: 0; /* Stick it to the right side */
-  height: 60%; /* Full height of the section */
-  width: 50%; /* Adjust width as needed */
-  background: #f4f4f9;
+  height: 90%; /* Full height of the section */
+  width: 60%; /* Adjust width as needed */
+  background: red;
   z-index: -1; /* Place behind content */
 }
 .introduction-parent {
@@ -289,7 +290,6 @@ section.main-container.cta-section::after {
   box-shadow: 0 0 10px #99334d3b;
   padding: 40px;
   border-radius: 20px;
-  background-color: white;
 }
 .box-inner h3 {
   font-family: Jakarta;

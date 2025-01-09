@@ -22,9 +22,6 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-body {
-  font-family: Inter;
-}
 li {
   list-style: none;
 }
@@ -33,20 +30,20 @@ li a {
 }
 .main-container {
   max-width: 100%;
+  height: 100vh;
+  background-image: url("/image/hero-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
 .container {
   max-width: 1400px;
   display: block;
   margin: 0 auto;
   padding: 25px;
 }
-h1 h2 h3 h5 h5 {
-  font-family: Jakarta;
-}
-p {
-  color: #8a9198;
-}
+
+/* General Styles */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -57,15 +54,17 @@ nav {
   padding-bottom: 20px;
   position: relative;
   transition: all 0.3s ease;
-  z-index: 666666666;
+  z-index: 1000;
 }
+
 nav.sticky {
   background-color: rgba(253, 253, 254, 0.8);
   position: sticky;
   top: 0;
   padding-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow effect for better visibility */
 }
+
 .logo img {
   max-height: 50px;
 }
@@ -107,11 +106,13 @@ nav.sticky {
 .dropdown-menu li:hover {
   background: #f1f1f1;
 }
+
 .actions {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 .get-started {
   background: #5d74f2;
   color: #fff;
@@ -126,186 +127,65 @@ nav.sticky {
   cursor: pointer;
   transition: 0.5s;
 }
+
 .get-started:hover {
   background: #f2f0fb;
   border: 1px solid black;
   color: #585f6e;
 }
 
-/*  Hero Section Styles Here */
-.Hero-parents-container {
-  max-width: 100%;
-  height: 120vh;
-  background-image: url("/image/hero-1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+/* General Hero Section Styles */
 .hero-parents {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
+  justify-content: space-between; /* Ensure space between the two sections */
+  align-items: center; /* Vertically align items */
+  gap: 20px; /* Optional: Adjust spacing between sections */
+  padding: 20px; /* Add some padding for spacing */
 }
 
+/* Left Side */
 .left-side {
-  flex: 1;
+  flex: 1; /* Make the left side take up equal space as the right */
 }
+
 .left-side h1 {
   font-size: 4.5rem;
   color: #282d3a;
   margin-bottom: 20px;
   font-family: Jakarta;
 }
+
 .left-side p {
   font-size: 25px;
-  width: 560px;
+  width: 500px;
   color: #5a5a5a; /* Subtle color for the paragraph text */
   margin-bottom: 20px;
-  opacity: 0.8;
 }
 
 .left-side button {
   background: #5d74f2;
   color: white;
-  font-size: 20px;
+  font-size: 1rem;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 270px;
-  font-family: Inter;
-  height: 70px;
 }
 
 .left-side button:hover {
   background: #4b62d8;
 }
-.icon img {
-  width: 20px;
-}
-
-.text {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-top: 15px;
-}
-.icon {
-  display: flex;
-  gap: 5px;
-}
-
-.icon img {
-  width: 20px;
-  height: 20px;
-}
-
-.text p {
-  margin: 0;
-  font-size: 26px;
-}
 
 /* Right Side */
 .right {
-  flex: 1;
+  flex: 1; /* Make the right side take up equal space as the left */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
 }
 
 .right img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain the aspect ratio */
   object-fit: contain;
-}
-section.main-container.cta-section {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-section.main-container.cta-section::after {
-  content: ""; /* Required for pseudo-elements */
-  position: absolute;
-  top: 20%;
-  right: 0; /* Stick it to the right side */
-  height: 60%; /* Full height of the section */
-  width: 50%; /* Adjust width as needed */
-  background: #f4f4f9;
-  z-index: -1; /* Place behind content */
-}
-.introduction-parent {
-  display: flex;
-  justify-content: space-between;
-}
-
-.introduction-text {
-  width: 40%;
-  margin-right: 50px;
-  display: flex;
-  align-items: center;
-}
-.introduction-text .inner h4 {
-  font-family: Jakarta;
-  color: rgb(108, 117, 125);
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-.introduction-text .inner h2 {
-  font-family: Jakarta;
-  font-size: 63px;
-  color: rgb(49, 52, 53);
-  margin-bottom: 20px;
-}
-.introduction-text .inner p {
-  line-height: 1.5;
-  font-family: Inter;
-  font-size: 22px;
-  color: rgb(49, 52, 53);
-}
-.introduction-text .inner ul li {
-  list-style: initial;
-  margin-left: 15px;
-  font-size: 22px;
-  line-height: 1.5;
-  margin-top: 10px;
-}
-.box-parent {
-  display: flex;
-  flex-wrap: wrap;
-  width: 60%;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.box {
-  width: 50%;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 30px;
-}
-.box-inner {
-  box-shadow: 0 0 10px #99334d3b;
-  padding: 40px;
-  border-radius: 20px;
-  background-color: white;
-}
-.box-inner h3 {
-  font-family: Jakarta;
-  font-size: 23px;
-  margin-bottom: 10px;
-}
-.box-inner p {
-  font-family: Inter;
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.box-inner svg {
-  width: 60px;
-  height: 60px;
-  background: #f4f9fc;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 50%;
 }
